@@ -32,7 +32,7 @@ const workList = $('#workList');
 if (workList) {
   const limit = +workList.dataset.limit || CLIENTS.length;
   workList.innerHTML = CLIENTS.slice(0, limit).map((c, i) => `<li><a href="${clientUrl(c)}" data-img="${cover(c)}" style="--dot:${c.brand.ac}">
-    <span class="n">${pad2(i + 1)}<i class="dot"></i></span>
+    <span class="n">${pad2(i + 1)}<i class="bdot"></i></span>
     <span class="t">${c.name}<small>${c.en}</small></span>
     <span class="c"><b>${c.cat}</b>${c.services.join(' · ')}</span>
     <span class="ar">↖</span></a></li>`).join('');

@@ -455,7 +455,7 @@ tfoot td:first-child { font-size: 14px; font-weight: 500; }
 .c-strip .sw img { width: 100%; height: 100%; object-fit: cover; }
 .c-strip a:hover, .c-strip a.cur { background: var(--sb); color: var(--sf); border-color: var(--sb); }
 
-.index .n .dot { display: inline-block; width: 8px; height: 8px; margin-inline-start: 8px; border-radius: 50%; background: var(--dot); vertical-align: middle; }
+.index .n .bdot { display: inline-block; width: 8px; height: 8px; margin-inline-start: 8px; border-radius: 50%; background: var(--dot); vertical-align: middle; }
 .to-top { position: fixed; bottom: 84px; left: 23px; z-index: 55; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 18px; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .5); opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .4s, transform .4s var(--ease); }
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 
@@ -482,3 +482,16 @@ tfoot td:first-child { font-size: 14px; font-weight: 500; }
 #identity, #works, #reels { scroll-margin-top: 120px; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ───── Light mode: hero follows the theme (it used to stay dark) ───── */
+html:not([data-theme="dark"]) .hero { background: var(--paper); color: var(--ink); }
+html:not([data-theme="dark"]) .hd:not(.solid) { color: var(--ink); }
+html:not([data-theme="dark"]) .hero-glow { background: radial-gradient(circle, rgba(217, 162, 60, .24), transparent 60%); }
+html:not([data-theme="dark"]) .mq-unit { color: rgba(23, 20, 15, .07); }
+html:not([data-theme="dark"]) .mq-unit .lat { color: rgba(155, 109, 20, .2); }
+html:not([data-theme="dark"]) .hero-logo::before { background: radial-gradient(closest-side, rgba(244, 239, 228, .95), rgba(244, 239, 228, .65) 55%, transparent); }
+html:not([data-theme="dark"]) .hero-line { background: rgba(23, 20, 15, .3); }
+html:not([data-theme="dark"]) .hero-br a { color: var(--gold-deep); }
+html:not([data-theme="dark"]) .scroll-cue { background: rgba(23, 20, 15, .2); }
+html:not([data-theme="dark"]) .scroll-cue::after { background: var(--ink); }
+.hero, .hero-line, .scroll-cue, .mq-unit { transition: background-color .45s, color .45s; }
